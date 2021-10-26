@@ -26,3 +26,27 @@ To check status of Nginx, I used used this command.
 
 `:~ $: sudo systemctl status nginx`
 
+Screenshot of Nginx status.
+
+![nginx](/LEMP/project2/images/nginx.png)
+
+To access the server locally on my machine using the DNS name, I used this code. The server can also be accessed using the ip address, by using the second command.
+
+`:~ $: curl http://localhost:80`
+
+`:~ $: curl http://127.0.0.1:80`
+
+To check if Nginx is correctly running on my web browser, I used the ip address of the server to ping using the command:
+
+`:~ $: ping <ip address>`
+After which i used the ip address to check if it was responding on the web browser. 
+
+Screenshot of Nginx working on the ip address.
+
+![ubuntu](/LEMP/project2/images/nginxs.png)
+
+
+
+
+
+
