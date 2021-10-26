@@ -11,7 +11,7 @@ In order to install Nginx server. First, had to login to the aws account, I used
 
 I successfully configured the ec2 instance to communicate with local machine through the git bash terminal. To install Nginx server, I had to run these commands.
 
-
-
+`:~ $: sudo apt update `
+`:~ $: sudo apt install nginx `
 
 
