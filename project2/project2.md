@@ -47,6 +47,7 @@ Screenshot of Nginx working on the ip address.
 ![ubuntu](/LEMP/project2/images/nginxs.png)
 
 
+
 ## INSTALLATION OF MYSQL 
 ___ 
 
