@@ -44,8 +44,7 @@ After which i used the ip address to check if it was responding on the web brows
 
 Screenshot of Nginx working on the ip address.
 
-![ubuntu](./project2/images/nginxs.png)
-
+![ubuntu](/LEMP/project2/images/nginxs.png)
 
 
 ## INSTALLATION OF MYSQL 
