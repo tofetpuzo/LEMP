@@ -50,7 +50,8 @@ Screenshot of Nginx working on the ip address.
 ## INSTALLATION OF MYSQL 
 ___ 
 
-The installation of mySQL on the server allows data to be stored 
+After, the installation of a webserver (Nginx),, The server-side will need a database to store data of the website, hence why I installed mySQL on the server.
+
 
 
 
