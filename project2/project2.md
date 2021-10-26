@@ -50,8 +50,12 @@ Screenshot of Nginx working on the ip address.
 ## INSTALLATION OF MYSQL 
 ___ 
 
-After, the installation of a webserver (Nginx),, The server-side will need a database to store data of the website, hence why I installed mySQL on the server.
+After, the installation of a webserver (Nginx).The server-side will need a database to store data of the website, hence why I installed mySQL on the server. I used this code 
 
+`:~ $: sudo apt install mysql-server`
 
+After, the installation of mySQL, I ran a security script that comes pre-installed with mySQL. This script was used to ensure that the database is secure.
+
+![ubuntu](./image/mysql.png)
 
 
