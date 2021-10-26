@@ -12,7 +12,7 @@ In order to install Nginx server. First, had to login to the aws account, I used
 
 I successfully configured the ec2 instance to communicate with local machine through the git bash terminal. 
 
-![ubuntu](/LEMP/project2/images/ubuntu.png)
+![ubuntu](/LAMP/project/images/ubuntu.png)
 
 To install Nginx server, I had to run these commands.
 
@@ -28,7 +28,7 @@ To check status of Nginx, I used used this command.
 
 Screenshot of Nginx status.
 
-![nginx](/LEMP/project2/images/nginx.png)
+![nginx](/LAMP/project/images/nginx.png)
 
 To access the server locally on my machine using the DNS name, I used this code. The server can also be accessed using the ip address, by using the second command.
 
@@ -44,7 +44,7 @@ After which i used the ip address to check if it was responding on the web brows
 
 Screenshot of Nginx working on the ip address.
 
-![ubuntu](/LEMP/project2/images/nginxs.png)
+![ubuntu](/LAMP/project/images/nginxs.png)
 
 
 ## INSTALLATION OF MYSQL 
