@@ -39,6 +39,7 @@ To access the server locally on my machine using the DNS name, I used this code.
 To check if Nginx is correctly running on my web browser, I used the ip address of the server to ping using the command:
 
 `:~ $: ping <ip address>`
+
 After which i used the ip address to check if it was responding on the web browser. 
 
 Screenshot of Nginx working on the ip address.
@@ -46,7 +47,10 @@ Screenshot of Nginx working on the ip address.
 ![ubuntu](/LEMP/project2/images/nginxs.png)
 
 
+## INSTALLATION OF MYSQL 
+___ 
 
+The installation of mySQL on the server allows data to be stored 
 
 
 
