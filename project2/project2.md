@@ -146,14 +146,25 @@ Screenshot of database on mysql:
 
 The next step is to create a password that meets the sql requirements to get this I used this command on mysql terminal.
 
-`SHOW VARIABLES LIKE 'validate_password%';`
+`mysql> SHOW VARIABLES LIKE 'validate_password%';`
 
 Screenshot of result:
+
+
 ![pass_req](./image/passw.png)
 
 
 
 ![sql](./image/sqlsuc.png)
 
-After creating, 
+After creating, the user has shown above, I went on to create a simple cart items. 
+
+To navigate to the current USER database, I used this command,
+mysql> USE USER .
+
+![sql](./image/users.png)
+
+The next step was to create a table which was named a cart, I inserted 4 items 
+
+
 
