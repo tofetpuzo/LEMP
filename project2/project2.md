@@ -113,7 +113,26 @@ After, deactivating the default site, I proceed to add some html documents into 
 
 `sudo echo 'Hello LEMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectLEMP/index.html`
 
-Screenshot below
+Screenshot below:
 
 ![working_ip](./image/wok.png)
 
+### TESTING MY PHP
+___
+
+
+To test php and ensure Nginx passed it to the php processor earlier configured. I had to ensure that index.php comes before index.html, by changing the configuration. The next step is to create a php file and edit it using Nano editor. I used this command.
+
+`sudo nano /var/www/projectLEMP/info.php` , 
+
+To get information about php server running, I did input this command into the info file: * <?php phpinfo() *;
+
+Screenshot below:
+![php_works](./image/confsucess.png)
+
+After checking all the necessary information about the php server, I had to remove the file from the Ubuntu server in order to prevent security bridge.
+
+### RETRIEVING DATA FROM MYSQL WITH PHP
+___
+
+I 
