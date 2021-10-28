@@ -170,6 +170,9 @@ where password meets the above requirements.
 I used the exit command and logged in as the user, using this code.
 
 `mysql -u example_user -p`
+
+
+
 ![sql](./image/auth.png)
 
 
