@@ -105,6 +105,15 @@ I also deactivated Nginx host which is currently listening on port 80, using thi
 
 `sudo unlink /etc/nginx/sites-enabled/default`
 
-To effect this change Nginx must be reloaded 
+To effect this change Nginx must be reloaded  using this command.
 
+`sudo systemctl reload nginx`
+
+After, deactivating the default site, I proceed to add some html documents into my projectLEMP folder, I created earlier using these lines of code.
+
+`sudo echo 'Hello LEMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectLEMP/index.html`
+
+Screenshot below
+
+![working_ip](./image/wok.png)
 
