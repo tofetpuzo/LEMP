@@ -1,7 +1,13 @@
 # LEMP IMPLEMENTATION
 LEMP is an open source web application stack  used for developing high performance web application. 
 
-This is used all over the world and with the advert of cloud services. Companies can now scale up or down going to their need. The process of implementing LEMP is explained in view to understanding how LEMP works. 
+
+This is used all over the world and with the advert of cloud services. Companies can now scale up or down going to their need. The process of implementing LEMP is explained in view to understanding how LEMP works. For this implementation, I connect my local machine with aws server through linux via putty. I used this code.
+
+
+![put](./image/pty.png)
+`ps -p $$`
+
 
 INSTALLATION OF NGINX WEB SERVER
 ___
@@ -68,7 +74,11 @@ To check if I correctly installed mysql, I ran this command.
 ### PHP INSTALLATION
 ___ 
 
-After, installing mySQL on the aws server, I proceed to install PHP, which is the final component in the LEMP implementation. PHP is used develop to static websites as well as dynamic websites for users.
+After, installing mySQL on the aws server, I proceed to install PHP, which is the final component in the LEMP stack. PHP is used for developing static websites as well as dynamic websites for users. 
+
+However, Nginx requires an external software to handle PHP processing and act as a bridge between the PHP and the web server, this increases overall performance of the PHP-based application or website. To do this I need to do some extra configuration, which is to install a process manager such as fastCGI process manager; this manager allows Nginx to pass PHP requests to it for processing. In addition, I installed a module called php-mysql which for communication between PHP and mySQL. I installed the two packages using one line of command:
+
+`sudo apt install php-fpm php-mysql`
 
 
 
