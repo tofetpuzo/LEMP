@@ -2,7 +2,7 @@
 LEMP is an open source web application stack  used for developing high performance web application. 
 
 
-This is used all over the world and with the advert of cloud services. Companies can now scale up or down going to their need. The process of implementing LEMP is explained in view to understanding how LEMP works. For this implementation, I connect my local machine with aws server through linux via putty. I used this code.
+This is used all over the world and with the advert of cloud services. Companies can now scale up or down according to their need. The process of implementing LEMP is explained in view to understanding how LEMP works. For this implementation, I connect my local machine with aws server through linux via putty. I used this code, to confirm I was in the right terminal.
 
 
 ![put](./image/pty.png)
@@ -14,12 +14,7 @@ ___
 
 By employing the Nginx webserver, Clients or Site visitors can view dynamic pages and gain access to contents that will meet their respective needs.
 
-In order to install Nginx server. First, had to login to the aws account, I used the ec2 instance of t2 nano family with Ubuntu 20.04LTS.
-
-I successfully configured the ec2 instance to communicate with local machine through the git bash terminal. 
-
-![ubuntu](./image/ubuntu.png)
-
+In order to install Nginx server. First, I had to login to the aws account, I used the ec2 instance of t2 nano family with Ubuntu 20.04LTS.
 
 To install Nginx server, I had to run these commands.
 
@@ -29,7 +24,7 @@ To install Nginx server, I had to run these commands.
 
 After, the installation of Nginx server. I had to check the status of Nginx on my terminal.
 
-To check status of Nginx, I used used this command.
+To check status of Nginx, I used this command.
 
 `:~ $: sudo systemctl status nginx`
 
@@ -37,19 +32,19 @@ Screenshot of Nginx status.
 
 ![nginx](./image/nginx.png)
 
-To access the server locally on my machine using the DNS name, I used this code. The server can also be accessed using the ip address, by using the second command.
+To ascertain that Nginx is correctly  installed on my local machine, I used both the DNS name and the ip address on aws server, by using lines of code below.
 
 `:~ $: curl http://localhost:80`
 
 `:~ $: curl http://127.0.0.1:80`
 
-To check if Nginx is correctly running on my web browser, I used the ip address of the server to ping using the command:
+After which I pinged the ip address of the aws server to check if it was responding.
 
 `:~ $: ping <ip address>`
 
-After which i used the ip address to check if it was responding on the web browser. 
 
-Screenshot of Nginx working on the ip address.
+
+Screenshot of Nginx- welcome page.
 
 ![ubuntu](./image/nginxs.png)
 
@@ -61,15 +56,19 @@ After, the installation of a webserver (Nginx).The server-side will need a datab
 
 `:~ $: sudo apt install mysql-server`
 
-After, the installation of mySQL, I ran a security script that comes pre-installed with mySQL. This script was used to ensure that the database is secure.
+After, the installation of mySQL, I ran a security script that is pre-installed with mySQL. This script was used to ensure that the database is secure.
 
 ![mysql](./image/mysql.png)
+
 
 To check if I correctly installed mysql, I ran this command. 
 
 `:~ $: sudo mysql` 
 
+
 ![my](./image/mysqlst.png)
+
+
 
 ### PHP INSTALLATION
 ___ 
@@ -78,18 +77,18 @@ After, installing mySQL on the aws server, I proceed to install PHP, which is th
 
 However, Nginx requires an external software to handle PHP processing and act as a bridge between the PHP and the web server, this increases overall performance of the PHP-based application or website. 
 
-To do this I need to do some extra configuration, which is to install a process manager such as fastCGI process manager; this manager allows Nginx to pass PHP requests to it for processing. In addition, I installed a module called php-mysql which for communication between PHP and mySQL. I installed the two packages using one line of command:
+To do this I did some extra configurations, which is to install a process manager such as fastCGI process manager; this manager allows Nginx to pass PHP requests to it for processing. In addition, I installed a module called php-mysql to allow easily for easy communicating between PHP and mySQL. I installed the two packages using one line of code:
 
 `sudo apt install php-fpm php-mysql`
 
-After, successfully installing the PHP, I will show how to configure the Nginx to use the PHP Processor to handle php requests from users.
+After, successfully installing the PHP, I decided to configure the Nginx to use the PHP Processor to handle php requests from users.
 
 ### CONFIGURATION OF NGINX TO USE PHP PROCESSOR
 ___
 
 Nginx has one server block by default which serves html requests or documents in its customized directory "/var/www/html". 
 
-Although, this works well for single site domain,it might be difficult to host or configure multiple domains, hence I create a directory independent of Nginx's customized directory. So that the Nginx server can be used to server a client request which does not match a website.  
+Although, this works well for single site domain,it might be difficult to host or configure multiple domains, hence I create a directory independent of Nginx's customized directory. So that, the Nginx server can be used to server a client request which does not match a website.  
 To do this, I ran this command:
 
 `sudo mkdir /var/www/projectLEMP`
@@ -105,11 +104,11 @@ Screenshot below.
 
 ![syntax](./image/syn.png)
 
-I also deactivated Nginx host which is currently listening on port 80, using this code.
+I deactivated Nginx host which is currently listening on port 80, using this code.
 
 `sudo unlink /etc/nginx/sites-enabled/default`
 
-To effect this change Nginx must be reloaded  using this command.
+To effect this change Nginx must be reloaded using this command.
 
 `sudo systemctl reload nginx`
 
@@ -166,7 +165,7 @@ where password meets the above requirements.
 ![sql](./image/sqlsuc.png)
 
 
-After creating the user, I proceed to exit and login has the user, using this code.
+I used the exit command and logged in as the user, using this code.
 
 `mysql -u example_user -p`
 ![sql](./image/auth.png)
@@ -195,7 +194,7 @@ Screenshot below:
 ![sql](./image/showcart.png)
 
 
-Finally, I did exit the mysql environment and proceed to create a php file which contains instructions on how to retrieve contents from the database using php language. 
+Finally, I did exit the mysql environment and  created a php file which contains instructions on how to retrieve contents from the database using php language. 
 
 Screenshot below:
 ![sql](./image/finished.png)
