@@ -14,6 +14,7 @@ I successfully configured the ec2 instance to communicate with local machine thr
 
 ![ubuntu](./image/ubuntu.png)
 
+
 To install Nginx server, I had to run these commands.
 
 `:~ $: sudo apt update `
@@ -66,6 +67,8 @@ To check if I correctly installed mysql, I ran this command.
 
 ### PHP INSTALLATION
 ___ 
+
+After, installing mySQL on the aws server, I proceed to install PHP, which is the final component in the LEMP implementation. PHP is used develop to static websites as well as dynamic websites for users.
 
 
 
