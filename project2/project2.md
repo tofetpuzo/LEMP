@@ -80,6 +80,6 @@ However, Nginx requires an external software to handle PHP processing and act as
 
 `sudo apt install php-fpm php-mysql`
 
-
+After, successfully installing the PHP, I will show how to configure the Nginx to use the PHP Processor to handle 
 
 
