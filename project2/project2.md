@@ -135,4 +135,25 @@ After checking all the necessary information about the php server, I had to remo
 ### RETRIEVING DATA FROM MYSQL WITH PHP
 ___
 
-I 
+To demonstrate how to retrieve data from php, I had to first navigate to mySQL environment, using the mySQL command.
+
+`sudo mysql`
+
+The next step is to create a database for a user, I named the database USER. 
+
+Screenshot of database on mysql:
+![show](./image/show.png)
+
+The next step is to create a password that meets the sql requirements to get this I used this command on mysql terminal.
+
+`SHOW VARIABLES LIKE 'validate_password%';`
+
+Screenshot of result:
+![pass_req](./image/passw.png)
+
+
+
+![sql](./image/sqlsuc.png)
+
+After creating, 
+
