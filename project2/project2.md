@@ -56,6 +56,17 @@ After, the installation of a webserver (Nginx).The server-side will need a datab
 
 After, the installation of mySQL, I ran a security script that comes pre-installed with mySQL. This script was used to ensure that the database is secure.
 
-![ubuntu](./image/mysql.png)
+![mysql](./image/mysql.png)
+
+To check if I correctly installed mysql, I ran this command. 
+
+`:~ $: sudo mysql` 
+
+![my](./image/mysqlst.png)
+
+### PHP INSTALLATION
+___ 
+
+
 
 
