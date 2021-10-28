@@ -9,7 +9,7 @@ This is used all over the world and with the advert of cloud services. Companies
 `ps -p $$`
 
 
-INSTALLATION OF NGINX WEB SERVER
+### INSTALLATION OF NGINX WEB SERVER
 ___
 
 By employing the Nginx webserver, Clients or Site visitors can view dynamic pages and gain access to contents that will meet their respective needs.
@@ -80,6 +80,17 @@ However, Nginx requires an external software to handle PHP processing and act as
 
 `sudo apt install php-fpm php-mysql`
 
-After, successfully installing the PHP, I will show how to configure the Nginx to use the PHP Processor to handle 
+After, successfully installing the PHP, I will show how to configure the Nginx to use the PHP Processor to handle php requests from users.
+
+### CONFIGURATION OF NGINX TO USE PHP PROCESSOR
+___
+
+Nginx has one server block by default which serves html requests or documents in its customized directory "/var/www/html". Although, this works well for single site domain,it might be difficult to host or configure multiple domains, hence I create a directory independent of Nginx's customized directory. So that the Nginx server can be used to server a client request which does not match a website.  
+To do this, I ran this command:
+
+`sudo mkdir /var/www/projectLEMP`
+
+
+
 
 
