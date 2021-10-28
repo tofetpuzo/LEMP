@@ -90,7 +90,21 @@ To do this, I ran this command:
 
 `sudo mkdir /var/www/projectLEMP`
 
+![me](./image/suc.png)
 
+I passed some configurations code into this directory. I also activated my configuration using this command:
 
+`sudo ln -s /etc/nginx/sites-available/projectLEMP /etc/nginx/sites-enabled/`
+
+This gives instruction to Nginx to use this configuration when next it reloads. I also made sure there was no syntax errors. 
+Screenshot below
+
+![syntax](./image/syn.png)
+
+I also deactivated Nginx host which is currently listening on port 80, using this code.
+
+`sudo unlink /etc/nginx/sites-enabled/default`
+
+To effect this change Nginx must be reloaded 
 
 
