@@ -76,7 +76,9 @@ ___
 
 After, installing mySQL on the aws server, I proceed to install PHP, which is the final component in the LEMP stack. PHP is used for developing static websites as well as dynamic websites for users. 
 
-However, Nginx requires an external software to handle PHP processing and act as a bridge between the PHP and the web server, this increases overall performance of the PHP-based application or website. To do this I need to do some extra configuration, which is to install a process manager such as fastCGI process manager; this manager allows Nginx to pass PHP requests to it for processing. In addition, I installed a module called php-mysql which for communication between PHP and mySQL. I installed the two packages using one line of command:
+However, Nginx requires an external software to handle PHP processing and act as a bridge between the PHP and the web server, this increases overall performance of the PHP-based application or website. 
+
+To do this I need to do some extra configuration, which is to install a process manager such as fastCGI process manager; this manager allows Nginx to pass PHP requests to it for processing. In addition, I installed a module called php-mysql which for communication between PHP and mySQL. I installed the two packages using one line of command:
 
 `sudo apt install php-fpm php-mysql`
 
@@ -85,7 +87,9 @@ After, successfully installing the PHP, I will show how to configure the Nginx t
 ### CONFIGURATION OF NGINX TO USE PHP PROCESSOR
 ___
 
-Nginx has one server block by default which serves html requests or documents in its customized directory "/var/www/html". Although, this works well for single site domain,it might be difficult to host or configure multiple domains, hence I create a directory independent of Nginx's customized directory. So that the Nginx server can be used to server a client request which does not match a website.  
+Nginx has one server block by default which serves html requests or documents in its customized directory "/var/www/html". 
+
+Although, this works well for single site domain,it might be difficult to host or configure multiple domains, hence I create a directory independent of Nginx's customized directory. So that the Nginx server can be used to server a client request which does not match a website.  
 To do this, I ran this command:
 
 `sudo mkdir /var/www/projectLEMP`
@@ -96,8 +100,8 @@ I passed some configurations code into this directory. I also activated my confi
 
 `sudo ln -s /etc/nginx/sites-available/projectLEMP /etc/nginx/sites-enabled/`
 
-This gives instruction to Nginx to use this configuration when next it reloads. I also made sure there was no syntax errors. 
-Screenshot below
+The code above gives instruction to Nginx to use this configuration when next it reloads. I also made sure there was no syntax errors. 
+Screenshot below.
 
 ![syntax](./image/syn.png)
 
@@ -153,18 +157,46 @@ Screenshot of result:
 
 ![pass_req](./image/passw.png)
 
+After creating the user using this code:
 
+`CREATE USER 'example_user'@ 'localhost' IDENTIFIED WITH mysql_native_password BY 'password';`
+
+where password meets the above requirements.
 
 ![sql](./image/sqlsuc.png)
 
-After creating, the user has shown above, I went on to create a simple cart items. 
+
+After creating the user, I proceed to exit and login has the user, using this code.
+
+`mysql -u example_user -p`
+![sql](./image/auth.png)
+
 
 To navigate to the current USER database, I used this command,
-mysql> USE USER .
 
-![sql](./image/users.png)
-
-The next step was to create a table which was named a cart, I inserted 4 items 
+`mysql> USE USER`
 
 
+The next step, I took was to create a simple 'cart' table for items. 
+
+
+![sql](./image/table.png)
+
+To insert items into the table created, I used the INSERT command in mySQL.
+
+![sql](./image/tableadded.png)
+
+To view the cart table, run this code:
+
+`SELECT * FROM cart;`
+
+Screenshot below:
+
+![sql](./image/showcart.png)
+
+
+Finally, I did exit the mysql environment and proceed to create a php file which contains instructions on how to retrieve contents from the database using php language. 
+
+Screenshot below:
+![sql](./image/finished.png)
 
