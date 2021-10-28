@@ -49,6 +49,8 @@ Screenshot of Nginx- welcome page.
 ![ubuntu](./image/nginxs.png)
 
 
+
+
 ## INSTALLATION OF MYSQL 
 ___ 
 
